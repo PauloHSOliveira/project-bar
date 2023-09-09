@@ -8,6 +8,7 @@ import {
   TabPanels,
   Tabs,
 } from '@chakra-ui/react';
+import Category from '@/components/Category/Category';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,40 +17,16 @@ export default function Home() {
     <Container className={inter.className} width="100%">
       <Flex direction="column" width="100%">
         <Tabs isLazy width="100%">
-          <TabList mb="1em">
+          <TabList mb="1em" overflowX="auto" overflowY="hidden">
             <Tab>Destaques</Tab>
-            <Tab>Item 1</Tab>
-            <Tab>Item 2</Tab>
-            <Tab>Item 3</Tab>
-            <Tab>Item 4</Tab>
-            <Tab>Item 5</Tab>
-            <Tab>Item 6</Tab>
-            <Tab>Item 7</Tab>
+            <Tab>Drinks</Tab>
           </TabList>
           <TabPanels>
             <TabPanel>
-              <p>Destaques!</p>
+              <Category />
             </TabPanel>
             <TabPanel>
-              <p>Item 1</p>
-            </TabPanel>
-            <TabPanel>
-              <p>Item 2</p>
-            </TabPanel>
-            <TabPanel>
-              <p>Item 3</p>
-            </TabPanel>
-            <TabPanel>
-              <p>Item 4</p>
-            </TabPanel>
-            <TabPanel>
-              <p>Item 5</p>
-            </TabPanel>
-            <TabPanel>
-              <p>Item 6</p>
-            </TabPanel>
-            <TabPanel>
-              <p>Item 7</p>
+              <Category />
             </TabPanel>
           </TabPanels>
         </Tabs>
